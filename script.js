@@ -88,6 +88,6 @@ function removeRow(id) {
   //Removing the row
   rowRemoval.remove();
 
-  //Call the function for removing the book object from that row
+  //Call the function for removing the book object from that row.
   removeBookFromRow();
 }
