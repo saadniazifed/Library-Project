@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="library-container">
+      <header class="header">
+        <div class="header-contents">My Library Collection</div>
+      </header>
+      <div class="sidebar">
+        <div class="sidebar-top-wrapper">
+          <h3>Add your Books by clicking the button below</h3>
+          <button class="button-53" role="button">Add Your Books</button>
+        </div>
+        <div class="input-wrapper" id="myForm">
+          <div class="form-wrapper">
+            <form action="#" class="container">
+            <label for="title">Title :</label>
+            <input type="text" id="title" placeholder="The Grinch" required/>
+
+            <label for="author">Author :</label>
+            <input type="text" id="author" placeholder="J.K Rowling" />
+
+            <label for="pages">Enter Total Pages of Book :</label>
+            <input type="number" id="pages" placeholder="250" />
+            <div class="pages_read-wrapper">
+              <label for="pages_read">Have you read the book?</label>
+              <select name="pages_read" id="pages_read">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </form>
+            </div>
+            <div class="button-class">
+            <button type="submit" id="addBooks-btn">Add Book</button>
+            <button id="cancelBooks-btn">Cancel Book</button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div id="main-content">
+        <div id="box"></div>
+      </div>
+    </div>
+  </body>
+</html>
