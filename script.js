@@ -43,7 +43,7 @@ function createTable() {
     html += `<td> ${myLibrary[i].author}  </td>`;
     html += `<td> ${myLibrary[i].pages}  </td>`;
     html += `<td> ${myLibrary[i].read}  </td>`;
-    html += `<td> <button class=removeRowBtn id="removeRowBtn" onclick=removeRow()>Delete Row</button>  </td>`;
+    html += `<td> <button class=removeRowBtn id=${myLibrary[i].id} onclick=removeRow(this.id)>Delete Row</button>  </td>`;
     html += `</tr>`;
   }
 
@@ -82,11 +82,9 @@ function removeBookFromRow(id) {
 }
 
 // Creating a remove row button function
-function removeRow() {
-  //getting the parent node i.e the row of the `Delete Row button`
-  const rowRemoval =
-    document.getElementById("removeRowBtn").parentNode.parentNode;
-
+function removeRow(id) {
+  //getting the parent node i.e the row of the Delete Row button
+  const rowRemoval = document.getElementById(id).parentNode.parentNode;
   //Removing the row
   rowRemoval.remove();
 
