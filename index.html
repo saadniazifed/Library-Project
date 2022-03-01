@@ -20,7 +20,7 @@
         </div>
         <div class="input-wrapper" id="myForm">
           <div class="form-wrapper">
-            <form action="#" class="container">
+            <form action="#" class="container" required>
             <label for="title">Title :</label>
             <input type="text" id="title" placeholder="The Grinch" required/>
 
@@ -28,24 +28,27 @@
             <input type="text" id="author" placeholder="J.K Rowling" />
 
             <label for="pages">Enter Total Pages of Book :</label>
-            <input type="number" id="pages" placeholder="250" />
+            <input type="number" id="pages" placeholder="250" required/>
             <div class="pages_read-wrapper">
-              <label for="pages_read">Have you read the book?</label>
-              <select name="pages_read" id="pages_read">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
+              <label for="pages_read" id="toggleLabel">Read?</label>
+              <label class="switch">
+                <input type="checkbox" value="no" id="toggleCheckbox">
+                <span class="slider round"></span>
+                <!-- Creating a toggle input above. -->
+              </label>              
             </form>
             </div>
             <div class="button-class">
             <button type="submit" id="addBooks-btn">Add Book</button>
             <button id="cancelBooks-btn">Cancel Book</button>
+          
           </div>
           </div>
         </div>
       </div>
       <div id="main-content">
         <div id="box"></div>
+
       </div>
     </div>
   </body>
