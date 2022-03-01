@@ -72,7 +72,7 @@ function getBookIndex(id) {
 }
 
 // Once the book ID has been found,add it in the function for removing the book object from the row
-function removeBookFromRow(id) {
+function removeBookFromArray(id) {
   //if the value returned in getBookIndex is less than 0, don't do anything.
   if (getBookIndex(id) < 0) {
     return;
@@ -85,9 +85,7 @@ function removeBookFromRow(id) {
 function removeRow(id) {
   //getting the parent node i.e the row of the Delete Row button
   const rowRemoval = document.getElementById(id).parentNode.parentNode;
-  //Removing the row
   rowRemoval.remove();
 
-  //Call the function for removing the book object from that row.
-  removeBookFromRow();
+  removeBookFromArray();
 }
