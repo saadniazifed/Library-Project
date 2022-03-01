@@ -5,20 +5,9 @@ function Books(title, author, pages, read, id) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  // this.read = read;
+  this.read = read;
   this.id = id;
 }
-
-// Creating a prototype of read and adding the function there.
-Books.prototype.read = function () {
-  const toggleCheckbox = document.getElementById("toggleCheckbox");
-  const readOrNot = document.getElementById("readOrNot");
-  if (toggleCheckbox.value === "no") {
-    return (readOrNot.innerText = "Have Not Read");
-  } else {
-    return (readOrNot.innerText = "Read it.");
-  }
-};
 
 // Selecting the button and adding an event listener.
 document
@@ -30,7 +19,7 @@ function addBookToLibrary() {
   title = document.getElementById("title").value;
   author = document.getElementById("author").value;
   pages = document.getElementById("pages").value;
-  // read = document.getElementById("pages_read").value;
+  read = document.getElementById("pages_read").value;
 
   let book = new Books(title, author, pages, read, nextBookId);
   myLibrary.push(book);
@@ -46,7 +35,7 @@ function createTable() {
   html += `<th>  TITLE  </th>`;
   html += `<th>  AUTHOR  </th>`;
   html += `<th>  PAGES  </th>`;
-  html += `<th id="readOrNot">  HAVE YOU READ IT?  </th>`;
+  html += `<th>  HAVE YOU READ IT?  </th>`;
   html += `<th>  Remove Row </th>`;
   for (var i = 0; i < myLibrary.length; i++) {
     html += `<tr data-id="${myLibrary[i].id}" id="removeRows">`;
@@ -54,7 +43,7 @@ function createTable() {
     html += `<td> ${myLibrary[i].author}  </td>`;
     html += `<td> ${myLibrary[i].pages}  </td>`;
     html += `<td> ${myLibrary[i].read}  </td>`;
-    html += `<td> <button class=removeRowBtn id=${myLibrary[i].id} onclick=removeRow(this.id)>Delete Row</button>  </td>`;
+    html += `<td> <button class=removeRowBtn id="${myLibrary[i].id}" onclick=removeRow(this.id)>Delete Row</button>  </td>`;
     html += `</tr>`;
   }
 
