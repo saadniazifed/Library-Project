@@ -103,7 +103,7 @@ input {
   appearance: none;
   align-self: start;
   width: 70%;
-  height: 30px;
+  height: 8%;
   border-radius: 5.5px;
 }
 
@@ -113,14 +113,13 @@ input {
 }
 
 select,
-input,
 .sidebar button {
   align-self: start;
 }
 
 .sidebar button,
 :placeholder-shown {
-  padding: 0.25rem;
+  padding: 0.65rem;
   font-family: var(--font-family-for-paragraphs);
 }
 
@@ -176,4 +175,43 @@ header,
 #addBookBtn,
 .readStatus {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.readStatus {
+  width: 100px;
+  height: 30px;
+}
+
+/* Form Validation Styling */
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control input {
+  margin-top: 10px;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 90%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
 }
