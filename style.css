@@ -76,6 +76,7 @@ table {
 th,
 td {
   padding: 12px 15px;
+  border: 0.25px solid black;
 }
 
 th {
@@ -148,7 +149,8 @@ button.openFormButton:active {
 }
 
 #addBookBtn,
-.removeRowBtn {
+.removeRowBtn,
+.readStatus {
   color: white;
   border: 1px solid #fb8f3d;
   background: -webkit-linear-gradient(top, #fda251, #fb8f3d);
@@ -161,13 +163,17 @@ button.openFormButton:active {
 }
 
 .removeRowBtn:hover,
-#addBookBtn:hover {
+#addBookBtn:hover,
+.readStatus:hover {
   margin-top: 2px;
 }
 
 table,
 .sidebar,
 header,
-.main-content {
+.main-content,
+.removeRowBtn,
+#addBookBtn,
+.readStatus {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

@@ -8,6 +8,8 @@ const form = document.querySelector("#form");
 addBookBtn.addEventListener("click", addBookToLibrary);
 openFormButton.addEventListener("click", formHidden_orVisible);
 
+// Miscellanious
+
 const myLibrary = [];
 let nextBookId = 1;
 
@@ -47,8 +49,10 @@ function createTable() {
               <td> ${myLibrary[i].title}  </td>
               <td> ${myLibrary[i].author}  </td>
               <td> ${myLibrary[i].pages}  </td>
-              <td id="fourth-row"> <button class="readStatus" id="${myLibrary[i].read}" onclick=changeStatus(this.id)> Read </button>  </td>
-              <td> <button class=removeRowBtn id="${myLibrary[i].id}" onclick=removeRow(this.id)>Delete Row</button>  </td>`;
+              <td id="fourth-row"> <button class="readStatus" id="${myLibrary[i].id}" > 
+              ${myLibrary[i].read} </button> </td>              
+              <td> <button class=removeRowBtn id="${myLibrary[i].id}" onclick=removeRow(this.id)>Delete Row</button>  
+              </td>`;
     html += `</tr>`;
   }
 
@@ -74,7 +78,17 @@ function removeRow(id) {
   removeBookFromArray();
 }
 
-function changeStatus() {}
+// Adding an event listener to the entire main-content area
+mainContent.addEventListener("click", function (event) {
+  book = myLibrary[event.target.id - 1];
+  if (book.read == "Yes") {
+    book.read = "No";
+    event.target.textContent = "No";
+  } else if (book.read == "No") {
+    book.read = "Yes";
+    event.target.textContent = "Yes";
+  }
+});
 
 function formHidden_orVisible() {
   if (form.style.visibility == "visible") {
