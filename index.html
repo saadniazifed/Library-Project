@@ -12,7 +12,7 @@
     <header>My Library Collection</header>
     <div class="sidebar">
       <button class="openFormButton">Add Your Books!</button>
-      <form action="#" id="form">
+      <form action="/" id="form" onsubmit="return false">
         <label for="title">*Title: </label>
         <input
           type="text"
@@ -33,7 +33,13 @@
         />
 
         <label for="pages">*Pages: </label>
-        <input type="number" name="pages" id="pages" placeholder="250" />
+        <input
+          type="number"
+          name="pages"
+          id="pages"
+          placeholder="250"
+          required
+        />
 
         <label for="pages_read">Have you read it?</label>
         <select name="pages_read" id="pages_read">
