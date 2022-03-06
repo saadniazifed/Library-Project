@@ -28,9 +28,11 @@ function addBookToLibrary() {
   read = document.getElementById("pages_read").value;
 
   let book = new Book(title, author, pages, read, nextBookId);
-  myLibrary.push(book);
-  nextBookId++;
-  createTable();
+  if (title != "" && author != "" && pages != "") {
+    myLibrary.push(book);
+    nextBookId++;
+    createTable();
+  }
 }
 
 function createTable() {

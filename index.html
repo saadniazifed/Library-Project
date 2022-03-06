@@ -13,7 +13,7 @@
     <div class="sidebar">
       <button class="openFormButton">Add Your Books!</button>
       <form action="#" id="form">
-        <label for="title">Title: </label>
+        <label for="title">*Title: </label>
         <input
           type="text"
           name="title"
@@ -21,16 +21,18 @@
           placeholder="Harry Potter"
           required
         />
+        <p class="titleError"></p>
 
-        <label for="author">Author: </label>
+        <label for="author">*Author: </label>
         <input
           type="text"
           name="author"
           id="author"
           placeholder="J.K Rowling"
+          required
         />
 
-        <label for="pages">Pages: </label>
+        <label for="pages">*Pages: </label>
         <input type="number" name="pages" id="pages" placeholder="250" />
 
         <label for="pages_read">Have you read it?</label>
@@ -39,7 +41,7 @@
           <option value="No">No</option>
         </select>
 
-        <button type="button" id="addBookBtn">Add Your Books</button>
+        <button type="click" id="addBookBtn">Add Your Books</button>
       </form>
     </div>
     <div class="main-content"></div>
