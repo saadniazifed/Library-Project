@@ -2,7 +2,7 @@
 
 A fully functional Library project which can be used in the browser.
 
-The Eigth project in the JavaScript section of [The Odin Project](https://www.theodinproject.com/).
+The Eighth project in the JavaScript section of [The Odin Project](https://www.theodinproject.com/).
 
 Spec and details for the assignment can be found [Here](https://www.theodinproject.com/lessons/node-path-javascript-library)
 
