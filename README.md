@@ -17,7 +17,7 @@ Use it Live in the browser [Here](https://saadniazifed.github.io/Library-Project
 
 ## How to use
 
-* Use the calculator online in [The Browser](https://saadniazifed.github.io/Library-Project/)
+* Use the Library online in [The Browser](https://saadniazifed.github.io/Library-Project/)
 * To start using, select the Add Your books button.
 * Fill in the form with the correct title, name, pages and have you read the book or not.
 * Click the Add Your Books button to append the information to the table in the main body.
